@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./MyComponents/Header";
+import { Footer } from "./MyComponents/Footer";
+import {Books} from "./MyComponents/Books";
+import { Bookitem } from "./MyComponents/Bookitem";
+
 
 function App() {
+  let Books=[
+    {
+      sno:1,
+      title:"The Alchemist",
+      author:"Paulo Coelho"
+
+    },
+    {
+      sno:2,
+      title:"The Alchemist",
+      author:"Paulo Coelho"
+
+    },
+    {
+      sno:3,
+      title:"The Alchemist",
+      author:"Paulo Coelho"
+
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <>
+    <Header title="" searchBar={true}/>
+    <Footer/>
+    <Books Books={Books}/>
+    </>
   );
 }
 
